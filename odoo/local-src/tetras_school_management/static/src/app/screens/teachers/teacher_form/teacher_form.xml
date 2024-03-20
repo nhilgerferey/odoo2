@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+     <t t-name="tetras_school_management.TeacherFormScreen">
+         <div class="teacher-form">
+             <span>Name: <t t-esc="props.teacher.name"/></span>
+             <span>Phone: <t t-esc="props.teacher.phone"/></span>
+             <span>Email: <t t-esc="props.teacher.email"/></span>
+             <span>Diploma: <t t-esc="props.teacher.diploma"/></span>
+             <button class="btn btn-primary" t-on-click="() => this.tetras.showScreen('TeacherListScreen')">Back</button>
+         </div>
+    </t>
+</templates>

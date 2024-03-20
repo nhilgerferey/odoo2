@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+     <t t-name="tetras_school_management.ClassroomListScreen">
+         <div class="classroom-list-container">
+             <strong>Classrooms List</strong>
+             <table class="classroom-table">
+                 <thead>
+                     <tr>
+                         <th>Name</th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <t t-foreach="tetras.classrooms" t-as="classroom" t-key="classroom.id">
+                         <ClassroomLine name="classroom.name"
+                                        classroomId="classroom.id"
+                                        onClick="() => this.onClassroomClick(classroom)" />
+                     </t>
+                 </tbody>
+             </table>
+             <div class="back-button" t-on-click="() => this.tetras.showScreen('MainScreen')">Back</div>
+         </div>
+    </t>
+</templates>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="tetras_school_management.MainScreen">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="wrapper">
+                        <h1 class="text-center mb-4">Menu principal :</h1>
+                        <button class="button main-button mb-2" t-on-click="() => tetras.showScreen('StudentListScreen')">Students</button>
+                        <button class="button main-button mb-2" t-on-click="() => tetras.showScreen('TeacherListScreen')">Teachers</button>
+                        <button class="button main-button mb-2" t-on-click="() => tetras.showScreen('ControlListScreen')">Controls</button>
+                        <button class="button main-button" t-on-click="() => tetras.showScreen('ClassroomListScreen')">Classrooms</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>
