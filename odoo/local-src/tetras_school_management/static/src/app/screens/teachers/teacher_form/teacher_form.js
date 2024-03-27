@@ -11,6 +11,10 @@ export class TeacherFormScreen extends Component {
         this.tetras = useTetras();
     }
 
+    async send() {
+        await this.tetras.orm.call("tetras.teacher", "write_teacher", [this.props.teacher.id, this.props.teacher]);
+    }
+
 }
 
 registry.category("tetras_screens").add("TeacherFormScreen", TeacherFormScreen);

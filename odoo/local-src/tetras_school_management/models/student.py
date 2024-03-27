@@ -16,6 +16,8 @@ class Student(models.Model):
 
     classroom_id = fields.Many2one('tetras.classroom', string="Classroom")
 
+    def write_student(self, vals_list):
+        return self.write(vals_list);
 
 
 

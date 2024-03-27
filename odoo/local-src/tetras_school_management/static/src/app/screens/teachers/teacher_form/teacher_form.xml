@@ -2,10 +2,15 @@
 <templates id="template" xml:space="preserve">
      <t t-name="tetras_school_management.TeacherFormScreen">
          <div class="teacher-form">
-             <span>Name: <t t-esc="props.teacher.name"/></span>
-             <span>Phone: <t t-esc="props.teacher.phone"/></span>
-             <span>Email: <t t-esc="props.teacher.email"/></span>
-             <span>Diploma: <t t-esc="props.teacher.diploma"/></span>
+             <input type="text" placeholder="Name" t-model="props.teacher.name" />
+             <br/>
+             <input type="text" placeholder="Phone" t-model="props.teacher.phone" />
+             <br/>
+             <input type="text" placeholder="Email" t-model="props.teacher.email" />
+             <br/>
+             <input type="text" placeholder="Diploma" t-model="props.teacher.diploma" />
+             <br/>
+             <button class="send-button" t-on-click="() => this.send()">Save</button>
              <button class="btn btn-primary" t-on-click="() => this.tetras.showScreen('TeacherListScreen')">Back</button>
          </div>
     </t>
