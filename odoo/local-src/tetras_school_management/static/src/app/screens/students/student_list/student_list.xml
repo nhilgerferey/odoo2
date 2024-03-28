@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template" xml:space="preserve">
      <t t-name="tetras_school_management.StudentListScreen">
+         <div>
+             <input type="text" id="name" t-model="state.studentName"/>
+             <button t-on-click="onStudentCreate">Ajouter
+             </button>
+         </div>
          <strong>Students List</strong>
          <table>
              <thead>

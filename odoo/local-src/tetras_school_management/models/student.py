@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class Student(models.Model):
@@ -17,7 +17,13 @@ class Student(models.Model):
     classroom_id = fields.Many2one('tetras.classroom', string="Classroom")
 
     def write_student(self, vals_list):
-        return self.write(vals_list);
+        return self.write(vals_list)
+
+
+    @api.model
+    def create_student(self, vals_list):
+        print(vals_list)
+        return self.create(vals_list)
 
 
 
